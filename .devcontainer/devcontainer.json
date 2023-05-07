@@ -1,0 +1,49 @@
+{
+  "name": "rails-photo-posting-app",
+  "dockerComposeFile": "../docker-compose.yaml",
+  "service": "app",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "bash /workspace/.devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "ruby.useLanguageServer": true,
+        "ruby.useBundler": false,
+        "ruby.format": "rubocop",
+        "ruby.lint": {
+          "rubocop": {
+            "useBundler": false
+          }
+        },
+        "[erb]": {
+          "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+        },
+        "vscode-erb-beautify.keepBlankLines": 1,
+        "files.associations": {
+          "*.html.erb": "erb"
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      },
+      "extensions": [
+        "rebornix.ruby",
+        "bung87.rails",
+        "castwide.solargraph",
+        "aki77.rails-db-schema",
+        "craigmaslowski.erb",
+        "kaiwood.endwise",
+        "jduponchelle.rainbow-end",
+        "aliariff.vscode-erb-beautify",
+        "koichisasada.vscode-rdbg",
+        "donjayamanne.git-extension-pack",
+        "redhat.vscode-yaml",
+        "oderwat.indent-rainbow"
+      ]
+    }
+  }
+}
