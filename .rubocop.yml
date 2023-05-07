@@ -1,0 +1,19 @@
+require:
+  - rubocop-rails
+
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - vendor/**/*
+    - config/initializers/devise.rb
+    - bin/*
+
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
