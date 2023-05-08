@@ -68,6 +68,8 @@ group :development, :test do
 
   gem 'solargraph', require: false
   gem 'solargraph-rails', require: false
+
+  gem 'htmlbeautifier', require: false
 end
 
 group :development do
