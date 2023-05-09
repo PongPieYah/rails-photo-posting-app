@@ -1,22 +1,22 @@
-require:
-  - rubocop-rails
+inherit_from:
+  - .rubocop_airbnb.yml
 
+# Rails 用に最適化
 Rails:
   Enabled: true
 
+# 文字数上限
+LineLength:
+  Max: 100
+
+# スキャン適用外のフォルダ、ファイル
 AllCops:
   Exclude:
-    - db/schema.rb
-    - vendor/**/*
-    - config/initializers/devise.rb
-    - bin/*
-
-# 日本語でのコメントを許可
-AsciiComments:
-  Enabled: false
-
-Style/Documentation:
-  Enabled: false
-
-Style/EmptyMethod:
-  Enabled: false
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'node_modules/**/*'
+    - 'bin/*'
+    - '**/Gemfile'
+    - 'vendor/**/*'
+    - '.git/**/*'
